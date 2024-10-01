@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply bg-extradevelop-light text-extradevelop-gray;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-extradevelop-dark;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded font-semibold text-sm shadow-sm transition-colors duration-150;
+  }
+  .btn-primary {
+    @apply bg-extradevelop-blue text-white hover:bg-blue-700;
+  }
+  .btn-secondary {
+    @apply bg-extradevelop-gray text-white hover:bg-gray-700;
+  }
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

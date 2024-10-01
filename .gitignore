@@ -22,3 +22,11 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Na konci souboru .gitignore
+# Ignorovat všechny .env soubory
+.env
+.env.*
+
+# Ale povolit veřejný .env v kořeni
+!/.env

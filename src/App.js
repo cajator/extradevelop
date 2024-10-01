@@ -53,7 +53,7 @@ function App() {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <FloatingHeader />
-        <main className="flex-grow pt-0"> {/* Přidáno pt-0 pro odsazení pod fixní hlavičkou */}
+        <main className="flex-grow pt-0">
           <Routes>
             <Route path="/" element={<Home projects={projectsData.slice(0, 3)} />} />
             <Route path="/about" element={<About />} />

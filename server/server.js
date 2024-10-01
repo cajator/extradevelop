@@ -23,7 +23,7 @@ let transporter = nodemailer.createTransport({
 
 app.post('/send-email', async (req, res) => {
   console.log('Požadavek na odeslání e-mailu přijat:', req.body);
-  const { name, email, phone, subject, message, recaptchaToken } = req.body;
+  const { name, email, phone, subject, message } = req.body;
 
   try {
     console.log('Ověřuji reCAPTCHA...');

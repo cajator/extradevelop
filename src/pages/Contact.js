@@ -22,8 +22,12 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormStatus('sending');
+    setErrorMessage('');
+
     if (!executeRecaptcha) {
       console.log('Execute recaptcha not yet available');
+      setFormStatus('error');
+      setErrorMessage('reCAPTCHA není dostupná');
       return;
     }
 
@@ -47,7 +51,7 @@ const ContactForm = () => {
       } else {
         console.error('Server error:', data);
         setFormStatus('error');
-        setErrorMessage(data.error || 'Neznámá chyba');
+        setErrorMessage(data.error || 'Neznámá chyba na straně serveru');
       }
     } catch (error) {
       console.error('Error:', error);
@@ -55,7 +59,10 @@ const ContactForm = () => {
       setErrorMessage('Chyba připojení k serveru');
     }
 
-    setTimeout(() => setFormStatus(null), 5000);
+    setTimeout(() => {
+      setFormStatus(null);
+      setErrorMessage('');
+    }, 5000);
   };
 
   return (

@@ -86,7 +86,7 @@ const About = () => {
         {/* Galerie realizací */}
         <h2 className="text-3xl font-bold mb-8 text-center">Naše realizace</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((index) => (
             <div key={index} className="relative overflow-hidden rounded-lg shadow-lg group">
               <img src={`/images/realizace-${index}.jpg`} alt={`Realizace ${index}`} className="w-full h-64 object-cover transition duration-300 ease-in-out transform group-hover:scale-110" />
               <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex items-center justify-center">

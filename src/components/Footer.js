@@ -9,13 +9,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">EXTRA DEVELOP</h3>
             <p className="text-sm mb-2">Inovativní developerské projekty</p>
-            <p className="text-sm">IČO: 12345678</p>
+            <p className="text-sm">IČ:  03514951</p>
+            <p className="text-sm">DIČ: CZ03514951</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <p className="text-sm mb-2">info@extradevelop.cz</p>
-            <p className="text-sm mb-2">+420 123 456 789</p>
-            <p className="text-sm">Hlavní 123, 110 00 Praha 1</p>
+            <p className="text-sm mb-2">+420 776 412 910</p>
+            <p className="text-sm">Oplealova 1417/25, 110 00 Praha 1</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Rychlé odkazy</h3>

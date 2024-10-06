@@ -32,6 +32,16 @@ const Home = ({ projects }) => {
     { src: "/images/projects/projekt4.jpg", alt: "Projekt 4" },
     { src: "/images/projects/projekt5.jpg", alt: "Projekt 5" },
     { src: "/images/projects/projekt6.jpg", alt: "Projekt 6" },
+    { src: "/images/projects/projekt7.jpg", alt: "Projekt 7" },
+    { src: "/images/projects/projekt8.jpg", alt: "Projekt 8" },
+    { src: "/images/projects/projekt9.jpg", alt: "Projekt 9" },
+    { src: "/images/projects/projekt10.jpg", alt: "Projekt 10" },
+    { src: "/images/projects/projekt11.jpg", alt: "Projekt 11" },
+    { src: "/images/projects/projekt12.jpg", alt: "Projekt 12" },
+    { src: "/images/projects/projekt13.jpg", alt: "Projekt 13" },
+    { src: "/images/projects/projekt14.jpg", alt: "Projekt 14" },
+    { src: "/images/projects/projekt15.jpg", alt: "Projekt 15" },
+    { src: "/images/projects/projekt16.jpg", alt: "Projekt 16" },
   ];
 
   const realizationImages = [
@@ -41,6 +51,16 @@ const Home = ({ projects }) => {
     { thumbnail: "/images/realizations/realizace4.jpg", full: "/images/realizations/realizace4.jpg", alt: "Realizace 4", description: "Popis realizace 4" },
     { thumbnail: "/images/realizations/realizace5.jpg", full: "/images/realizations/realizace5.jpg", alt: "Realizace 5", description: "Popis realizace 5" },
     { thumbnail: "/images/realizations/realizace6.jpg", full: "/images/realizations/realizace6.jpg", alt: "Realizace 6", description: "Popis realizace 6" },
+    { thumbnail: "/images/realizations/realizace7.jpg", full: "/images/realizations/realizace7.jpg", alt: "Realizace 7", description: "Popis realizace 7" },
+    { thumbnail: "/images/realizations/realizace8.jpg", full: "/images/realizations/realizace8.jpg", alt: "Realizace 8", description: "Popis realizace 8" },
+    { thumbnail: "/images/realizations/realizace9.jpg", full: "/images/realizations/realizace9.jpg", alt: "Realizace 9", description: "Popis realizace 9" },
+    { thumbnail: "/images/realizations/realizace10.jpg", full: "/images/realizations/realizace10.jpg", alt: "Realizace 10", description: "Popis realizace 10" },
+    { thumbnail: "/images/realizations/realizace11.jpg", full: "/images/realizations/realizace11.jpg", alt: "Realizace 11", description: "Popis realizace 11" },
+    { thumbnail: "/images/realizations/realizace12.jpg", full: "/images/realizations/realizace12.jpg", alt: "Realizace 12", description: "Popis realizace 12" },
+    { thumbnail: "/images/realizations/realizace13.jpg", full: "/images/realizations/realizace13.jpg", alt: "Realizace 13", description: "Popis realizace 13" },
+    { thumbnail: "/images/realizations/realizace14.jpg", full: "/images/realizations/realizace14.jpg", alt: "Realizace 14", description: "Popis realizace 14" },
+    { thumbnail: "/images/realizations/realizace15.jpg", full: "/images/realizations/realizace15.jpg", alt: "Realizace 15", description: "Popis realizace 15" },
+    { thumbnail: "/images/realizations/realizace16.jpg", full: "/images/realizations/realizace16.jpg", alt: "Realizace 16", description: "Popis realizace 16" },
   ];
 
   return (
@@ -51,8 +71,8 @@ const Home = ({ projects }) => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('/images/hero/hero-image.jpg')",
-            backgroundPosition: 'center', // Změněno z 'center center'
-            transform: "translateY(var(--scroll)) translateY(%)", // Přidáno translateY(-10%) pro posunutí nahoru
+            backgroundPosition: 'center top',
+            transform: "translateY(var(--scroll)) translateY(-1%)",
             transition: "transform 0.5s ease-out",
           }}
         />
@@ -145,7 +165,7 @@ const Home = ({ projects }) => {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-12">Galerie našich realizací</h2>
-            <ProjectGallery images={realizationImages} />
+            <ProjectGallery images={realizationImages} limit={12} />
           </div>
         </section>
       </FadeInSection>

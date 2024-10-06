@@ -169,15 +169,15 @@ const Contact = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <MapPin className="text-blue-600 mr-4" />
-                <p>Hlavní 123, 110 00 Praha 1</p>
+                <p>Oplealova 1417/25, 110 00 Praha 1</p>
               </div>
               <div className="flex items-center">
                 <Phone className="text-blue-600 mr-4" />
-                <p>+420 123 456 789</p>
+                <p>+420 776 412 910</p>
               </div>
               <div className="flex items-center">
                 <Mail className="text-blue-600 mr-4" />
-                <p>info@developergroup.cz</p>
+                <p>info@extradevelop.cz</p>
               </div>
               <div className="flex items-start">
                 <Clock className="text-blue-600 mr-4 mt-1" />
@@ -193,8 +193,7 @@ const Contact = () => {
               <h3 className="text-xl font-bold mb-4">Kde nás najdete</h3>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.0366009523254!2d14.418861515953493!3d50.06957647942435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e93e316b5b%3A0x35f9a1b68c15b322!2zSGxhdm7DrSAxMjMsIDExMCAwMCBQcmFoYSAx!5e0!3m2!1scs!2scz!4v1632740076196!5m2!1scs!2scz" 
-                  width="100%" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.1279942792037!2d14.430309315953475!3d50.0836722794239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ea231a0001%3A0x1234567890abcdef!2sOpletalova%201417%2F25%2C%20110%2000%20Praha%201!5e0!3m2!1scs!2scz!4v1234567890123" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                   height="100%" 
                   style={{border:0}} 
                   allowFullScreen="" 

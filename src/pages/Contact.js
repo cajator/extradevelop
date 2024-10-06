@@ -193,11 +193,13 @@ const Contact = () => {
               <h3 className="text-xl font-bold mb-4">Kde nás najdete</h3>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.1279942792037!2d14.430309315953475!3d50.0836722794239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ea231a0001%3A0x1234567890abcdef!2sOpletalova%201417%2F25%2C%20110%2000%20Praha%201!5e0!3m2!1scs!2scz!4v1234567890123" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                  height="100%" 
-                  style={{border:0}} 
-                  allowFullScreen="" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8905260553607!2d14.438333015738461!3d50.07226857942572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94a082cf9b6d%3A0x5a2a946c2a9c3e49!2sOplealova%201417%2F25%2C%20110%2000%20Nov%C3%A9%20M%C4%9Bsto!5e0!3m2!1scs!2scz!4v1635960448765!5m2!1scs!2scz"
+                  width="100%"
+                  height="100%"
+                  style={{border:0}}
+                  allowFullScreen=""
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                   title="Mapa s umístěním naší kanceláře"
                 ></iframe>
               </div>

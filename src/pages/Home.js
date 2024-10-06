@@ -51,7 +51,8 @@ const Home = ({ projects }) => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('/images/hero/hero-image.jpg')",
-            transform: "translateY(var(--scroll))",
+            backgroundPosition: 'center', // Změněno z 'center center'
+            transform: "translateY(var(--scroll)) translateY(%)", // Přidáno translateY(-10%) pro posunutí nahoru
             transition: "transform 0.5s ease-out",
           }}
         />
@@ -121,12 +122,20 @@ const Home = ({ projects }) => {
         </section>
       </FadeInSection>
 
-      {/* Vybrané projekty s filtry */}
+      {/* Přehled našich projektů */}
       <FadeInSection>
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-extrabold text-gray-900 text-center mb-12">Přehled našich projektů</h2>
-            <ProjectGrid projects={projects} />
+            <ProjectGrid projects={projects.slice(0, 3)} showFilters={false} />
+            <div className="text-center mt-8">
+              <Link
+                to="/projects"
+                className="inline-block bg-extradevelop-blue text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition duration-300"
+              >
+                Zobrazit všechny projekty
+              </Link>
+            </div>
           </div>
         </section>
       </FadeInSection>

@@ -17,7 +17,7 @@ const ProjectDetail = ({ projects }) => {
     <div className="container mx-auto px-6 pt-24 pb-12">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="relative h-64 sm:h-80 md:h-96">
-          <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover" />
+          <img src={`/images/projects/projekt${project.id}_optimized.jpg`} alt={project.title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-white text-center px-4 shadow-text">{project.title}</h1>
           </div>
@@ -26,7 +26,7 @@ const ProjectDetail = ({ projects }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-2xl font-bold mb-4 text-extradevelop-dark">O projektu</h2>
-              <p className="text-lg mb-6 text-extradevelop-gray">{project.description}</p>
+              <p className="text-lg mb-6 text-extradevelop-gray">{project.longDescription}</p>
               {project.features && project.features.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-xl font-bold mb-4 text-extradevelop-dark">Klíčové vlastnosti</h3>
@@ -73,6 +73,22 @@ const ProjectDetail = ({ projects }) => {
               </div>
             </div>
           </div>
+          
+          {project.gallery && project.gallery.length > 0 && (
+            <div className="mt-12">
+              <h2 className="text-2xl font-bold mb-6 text-extradevelop-dark">Galerie projektu</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {project.gallery.map((image, index) => (
+                  <img 
+                    key={index} 
+                    src={`/images/projects/gallery/${image}`} 
+                    alt={`${project.title} - obrázek ${index + 1}`}
+                    className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition duration-300"
+                  />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

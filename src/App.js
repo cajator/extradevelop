@@ -1,5 +1,6 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import ReactGA from 'react-ga4';
 import FloatingHeader from './components/FloatingHeader';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -7,7 +8,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import ProjectDetail from './components/ProjectDetail';
-import ScrollToTop from './components/ScrollToTop'
+import ScrollToTop from './components/ScrollToTop';
 
 const projectsData = [
   { 
@@ -177,6 +178,7 @@ const projectsData = [
   },
 ];
 
+// Komponenta pro sledování změn stránek
 const useScrollEffect = () => {
   React.useEffect(() => {
     const handleScroll = () => {
@@ -189,12 +191,25 @@ const useScrollEffect = () => {
   }, []);
 };
 
+const RouteTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+    }
+  }, [location]);
+
+  return null;
+};
+
 function App() {
   useScrollEffect();
 
   return (
-    <Router>
+     <Router>
       <ScrollToTop />
+      <RouteTracker />
       <div className="flex flex-col min-h-screen">
         <FloatingHeader />
         <main className="flex-grow pt-0">

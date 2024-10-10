@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from 'react-ga4';
+
+// Inicializace Google Analytics
+ReactGA.initialize('G-N1MGF3SZ1W'); // Nahraďte 'G-XXXXXXXXXX' vaším skutečným Measurement ID
 
 ReactDOM.render(
   <React.StrictMode>

@@ -206,6 +206,18 @@ const RouteTracker = () => {
 function App() {
   useScrollEffect();
 
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "//cdn.cookie-script.com/s/18b48aea21a65d081edc03b4a156d476.js";
+    script.async = true;
+    script.charset = "UTF-8";
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+  
   return (
      <Router>
       <ScrollToTop />

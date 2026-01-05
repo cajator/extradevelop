@@ -1,0 +1,11 @@
+[build]
+  # Adresář, kam React generuje hotový web
+  publish = "build"
+  # Příkaz pro sestavení (použijeme npm, protože máš package-lock.json)
+  command = "npm run build"
+
+[build.environment]
+  # Vynutíme Node.js verzi 20, která je stabilní na novém systému
+  NODE_VERSION = "20"
+  # Vypneme Yarn, aby se nehádal s NPM
+  NETLIFY_USE_YARN = "false"
